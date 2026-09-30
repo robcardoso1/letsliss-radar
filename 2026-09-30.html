@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Radar de Mercado 2026-09-30</title>
+<style>html,body{margin:0}img{max-width:100%}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: memorando premium do Let's Liss. Preto + dourado (brandbook), leitura no topo, temas com selo, fontes ao pé. Escuro primeiro, claro em off-white. */
+:root{
+  --bg:#121110; --card:#1C1B18; --deep:#0E0D0B; --fg:#F8F8F6; --muted:#9E9A8E; --line:#2A2820;
+  --gold:#D5AC58; --gold-hi:#F5D48D; --gold-ink:#121110; --gold-soft:rgba(213,172,88,.12);
+  --pos:#4CAF7D; --neg:#E05252;
+  --display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --body:"Montserrat","Segoe UI",Helvetica,Arial,sans-serif;
+  color-scheme:dark }
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#F8F8F6; --card:#FFFFFF; --deep:#ECEAE6; --fg:#1A1814; --muted:#6B6560; --line:#E2DED4;
+  --gold:#9A7A2E; --gold-hi:#B08F3A; --gold-ink:#F8F8F6; --gold-soft:rgba(213,172,88,.16);
+  --pos:#2E8B5B; --neg:#C43D3D;
+  color-scheme:light }}
+:root[data-theme="light"]{
+  --bg:#F8F8F6; --card:#FFFFFF; --deep:#ECEAE6; --fg:#1A1814; --muted:#6B6560; --line:#E2DED4;
+  --gold:#9A7A2E; --gold-hi:#B08F3A; --gold-ink:#F8F8F6; --gold-soft:rgba(213,172,88,.16);
+  --pos:#2E8B5B; --neg:#C43D3D;
+  color-scheme:light }
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:780px;margin:0 auto;min-width:0}
+.marca{display:flex;align-items:center;gap:14px;padding-block:28px 22px;border-bottom:1px solid var(--line)}
+.marca img{width:34px;height:auto;flex:none}
+.marca .nome{font-family:var(--body);font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:13px;color:var(--gold)}
+.marca .sub{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+header.capa{padding-block:34px 26px;border-bottom:1px solid var(--line);margin-bottom:28px}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,50px);line-height:1.08;margin:12px 0 14px;text-wrap:balance;color:var(--fg)}
+h1 em{font-style:italic;color:var(--gold-hi)}
+.meta{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 22px}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;font-size:12px;color:var(--muted)}
+.legend span{border:1px solid var(--line);border-radius:2px;padding:3px 9px;letter-spacing:.02em}
+p{margin:0 0 14px}
+.intro{font-family:var(--display);font-size:20px;line-height:1.5;color:var(--fg)}
+.intro::first-letter{color:var(--gold);font-size:1.15em}
+.leitura{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:4px;padding:24px 26px;margin:30px 0 36px;position:relative}
+.leitura h2{font-family:var(--display);font-size:26px;font-weight:500;margin:0 0 14px;color:var(--gold-hi)}
+.leitura ol{margin:0;padding:0;list-style:none;display:grid;gap:14px;counter-reset:leitura}
+.leitura li{counter-increment:leitura;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:start}
+.leitura li>div{min-width:0}
+.leitura li::before{content:counter(leitura);font-family:var(--display);font-size:26px;line-height:1;color:var(--gold);font-weight:500;padding-top:2px}
+.leitura li strong{font-weight:600;color:var(--fg)}
+.indice{display:grid;gap:8px;margin:0 0 40px;padding:0;list-style:none}
+.indice li{display:flex;gap:12px;align-items:baseline;min-width:0}
+.indice a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .15s}
+.indice a:hover,.indice a:focus-visible{border-color:var(--gold);outline:none;color:var(--gold-hi)}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border-radius:2px;white-space:nowrap;border:1px solid transparent;font-variant-numeric:tabular-nums}
+.tag.agir{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.tag.inv{color:var(--gold);border-color:var(--gold);background:var(--gold-soft)}
+.tag.acomp{color:var(--muted);border-color:var(--muted)}
+.tag.ign{color:var(--muted);border-color:var(--line);opacity:.8}
+section.tema{border-top:1px solid var(--line);padding-top:26px;margin-top:8px;margin-bottom:40px}
+section.tema h2{font-family:var(--display);font-size:26px;line-height:1.22;margin:12px 0 18px;font-weight:500;text-wrap:balance}
+section.tema h3{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:22px 0 8px;font-weight:600}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin-bottom:9px}
+li:last-child{margin-bottom:0}
+li::marker{color:var(--gold)}
+.rot{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-right:7px}
+.rot.hip{color:var(--muted)}
+.fontes{font-size:13px;color:var(--muted);border-left:2px solid var(--gold);padding-left:12px;margin-top:18px;line-height:1.7}
+.fontes a{color:var(--muted);word-break:break-word}
+.fontes a:hover,.fontes a:focus-visible{color:var(--gold-hi)}
+blockquote{margin:0 0 16px;padding:14px 18px;background:var(--card);border-left:3px solid var(--gold);border-radius:2px;font-family:var(--display);font-style:italic;font-size:18px;line-height:1.5}
+footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
+footer .assin{font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:11px;color:var(--gold)}
+a{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth} }
+@media (max-width:480px){ .leitura{padding:20px 18px} .leitura li{grid-template-columns:26px 1fr} .leitura li::before{font-size:22px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="marca">
+  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyIiBoZWlnaHQ9IjE3MCIgdmlld0JveD0iMCAwIDEwMiAxNzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik00NC4wNjUzIDE0Ni42ODdDNDQuMTE0NCAxNDcuMjIxIDQzLjI5MTYgMTQ2Ljg0NiA0My4wNDYgMTQ2Ljc2N0M0MC4wMDAyIDE0NS44NTIgMzYuMzAzNiAxNDQuMzE2IDMzLjM1IDE0My4wNTFDMTEuODY0MiAxMzMuODY1IC00LjE5OTU1IDExNy43NTIgMC45NzY5NDkgOTIuNDY1NUM4LjU1NDQxIDU1LjQ2ODYgNTcuNzA5NiA0NS41MjA5IDY5LjA2OTcgMTAuNjg1NEw3MC42MDQ4IDQuMzExNTJDNzEuMDcxNSAxNy44MjY5IDYzLjY5NjcgMjkuNzc2NSA1NC4yNTg2IDM4Ljc2NjJDMzUuOTEwNiA1Ni4yMzYyIDUuNzkxMTUgNzAuNjY2NSAzLjg1MDczIDk5LjM2MTNDMi4xNjIwOCAxMjQuMzQ3IDI0LjMwNSAxMzcuNjY2IDQ0LjA2NTMgMTQ2LjY4N1oiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl8zMDc3XzIwNykiLz4KPHBhdGggZD0iTTk2LjIzNTYgNzEuNTg3N0M5NS42NzA3IDY5LjIyMzYgOTMuMDM2NCA2OC44OTgyIDk1LjgzNjUgNjYuNjY5MkM5Ny45Nzk1IDY0Ljk2MjEgMTAyLjI0MSA2My41MjUyIDEwMS42NTggNjAuMDEyOEMxMDEuMzMyIDU4LjA1MzkgOTUuNjc2OCA1My4zMjU3IDk0LjA5ODcgNTEuMjA3MkM4Ny40MTc3IDQyLjI4NSA5MS4wODM3IDM2Ljc1MjMgODkuODg2MiAyNy4wMDExQzg5LjAzMjcgMjAuMDQzOCA4NC45Njc2IDEwLjk2MTkgODAuNDA1MiA1LjY1MDM0Qzc5LjQxMDQgNC40ODk3NyA3NS45NTMzIDAuOTM0Mzg3IDc0Ljc4NjYgMC4yNzczNDZDNzQuMzU2NyAwLjAzNzg2NDEgNzQuMDY4MSAtMC4wNDgxMDM5IDczLjU3MDggMC4wMjU1ODI5Qzc5LjU3MDEgOC41NzMyNSA4NS42NjE1IDE4LjY2MjIgODYuNDM1MiAyOS4zODM2Qzg2LjY2MjQgMzIuNTU4MyA4Ni4wNDg0IDM1LjY3NzcgODYuMTU4OSAzOC43Nzg3Qzg2LjQyOTEgNDYuNTQwNCA4OS45ODQ1IDUxLjc5MDYgOTQuODg0NyA1Ny40MDNDOTUuNTcyNCA1OC4xOTUyIDk4LjI2ODEgNjAuMzU2NiA5OC4xODIxIDYxLjI0N0M5OC4wMTAyIDYzLjA3MDggOTIuMDEwOSA2NS4zMDU5IDkxLjM4NDUgNjcuMzA3OEM5MC40NTEyIDcwLjI5ODIgOTMuODM0NiA3Mi4yMjAyIDkzLjAwNTcgNzQuMDE5NEM5Mi4xMjE0IDc1LjkyOTEgODcuMzgwOSA3Ni42MjkxIDg2Ljk3NTYgNzcuNjQ4NUw5MC4xNjI2IDc5LjgyMjJDOTIuMjMxOSA4MS42OTUxIDg5LjY4MzYgODIuNTQ4NyA4OC44OTE1IDg0LjEyMDZDODYuOTY5NSA4Ny45NDYyIDkyLjA3ODQgOTQuMjQ2NCA4Ni45NzU2IDk2LjQxNDFDODAuMzQ5OSA5OS4yMjY0IDY1LjE4ODkgOTMuNzc5OCA1OC42NDMgOTAuOTYxMkM1NC42NzYyIDg5LjI1NDIgNTAuOTQ4OSA4Ny4wNjgxIDQ3LjAyNTEgODUuMjg3M0M1MC4xOTk4IDg5Ljk1NDIgNTYuMTU2MSA5Mi4wMzU4IDYwLjk2NDIgOTQuNjcwMUw1OC42NzM3IDk2LjI2MDVDNTMuMjA4NiAxMDMuMDk1IDUxLjM3MjYgMTEzLjAxOCA1My40NjA0IDEyMS40NzRMNTQuNjA4NyAxMTMuMTFDNTUuNTIzNiAxMDguNTU0IDU2LjgxOTMgMTAzLjgzMiA1OS4zNDkyIDk5Ljg4OTZDNjAuMTc4MiA5OC42MDAxIDYyLjM3MDQgOTUuODM2OCA2NC4wMjIyIDk2LjAwODhDNjUuMjMxOSA5Ni4xMzE2IDY4LjgxOCA5Ny45MTg1IDcwLjUwNjYgOTguMzk3NUM3NS45Nzc5IDk5Ljk1MSA4OC40MDAyIDEwMi41NzMgOTEuNDU4MiA5Ni4wNzAyQzkzLjA1NDggOTIuNjc0NCA5MS40NzA1IDg5Ljg1NTkgOTEuMjg2MyA4Ni43MTgxQzkxLjE0NTEgODQuMzQ3OCA5Mi42NjE4IDg0LjM5NyA5My41ODI5IDgyLjkxMUM5NC44NjYyIDgwLjgzNTQgOTQuMTE3MSA3OS4zODAxIDkyLjYwNjUgNzcuNzgzNkM5NS4wNjg5IDc2LjczMzUgOTYuOTExIDc0LjQxMjQgOTYuMjQxNyA3MS41OTM5TDk2LjIzNTYgNzEuNTg3N1oiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcl8zMDc3XzIwNykiLz4KPHBhdGggZD0iTTkwLjk0ODYgMTQ1Ljc4NEM4MC41NTg3IDEyNS40MDQgNDUuMjMyMSAxMzMuNzM2IDM0LjE4NTIgMTA5LjI0MkMyNS44Mjc5IDkwLjcwOTQgMzUuNjQ2NiA2OC41MDUxIDQ3LjE0NzkgNTMuNjQ1QzQ3LjMxMzcgNTMuNDMgNDcuODcyNSA1My4xMjkxIDQ3LjQxODEgNTIuODQ2N0MzMy4xMTY3IDY2LjIzMzEgMjIuNjEwMiA4Ni45Njk4IDI5LjEyNTMgMTA2Ljc5MkMzMi45NTA5IDExOC40MjIgNDEuNzI1OCAxMjUuMjM4IDUyLjg0NjQgMTI5LjQ1NkM2NC41ODEgMTMzLjkwOCA4NC4zMDQ1IDEzNS45OTYgODkuMzE1MiAxNDkuNTYxQzkyLjQwMzkgMTU3LjkyNCA4OC41NzIyIDE2My4zNDYgODIuOTcyIDE2OC44MjRDODIuNjg5NSAxNjkuMSA4Mi4yOTA0IDE2OS4yMSA4Mi40MTMyIDE2OS43MzJDOTEuNzY1MyAxNjUuNTA4IDk1LjcwNzUgMTU1LjEwNiA5MC45NTQ3IDE0NS43NzJMOTAuOTQ4NiAxNDUuNzg0WiIgZmlsbD0idXJsKCNwYWludDJfbGluZWFyXzMwNzdfMjA3KSIvPgo8cGF0aCBkPSJNNzMuNjAxNCAxNTQuODE2QzY3Ljg0NzcgMTQ0LjY4NSA1My40OTcyIDE0MS4wNTUgNDMuNzg5IDEzNS44M0MyNS44NjQ3IDEyNi4xODMgMTUuNjY1MiAxMTEuNDg5IDE5LjI1NzQgOTAuMzcxMkMxOS41ODI5IDg4LjQ0OTIgMjAuMTkwOCA4Ni42NDM5IDIwLjYyMDYgODQuNzU4N0MyMC42ODIgODQuNDg4NiAyMC45NzY4IDgzLjg4NjggMjAuNDczMyA4My45NDJDMTYuMDA5MSA5My42MzE5IDE1LjAwMiAxMDMuOTQyIDE4LjU4ODEgMTE0LjExMUMyMy4xNjkgMTI3LjEwNCAzMy45NzY0IDEzNC42NjkgNDUuODQ2MSAxNDAuNDc4QzU0Ljg5MTEgMTQ0LjkwNiA2OC44NjA5IDE0OS4xMTIgNzIuNjkyNiAxNTkuNDgzQzc0LjA2MiAxNjMuMTkyIDczLjQ1NDEgMTY0Ljc1MiA3Mi44NzY5IDE2OC4zOTNDNzIuODMzOSAxNjguNjc2IDcyLjUyMDcgMTY5LjI3MSA3My4wMTgxIDE2OS4yMDRDNzUuODEyIDE2NC4zOSA3Ni40MjYxIDE1OS43OTYgNzMuNjAxNCAxNTQuODE2WiIgZmlsbD0idXJsKCNwYWludDNfbGluZWFyXzMwNzdfMjA3KSIvPgo8cGF0aCBkPSJNNzUuOTg0IDMyLjg1MjhDNzAuODg3MyAzMS43NTM3IDY1LjU1NzMgMzMuODUzOCA2Mi4yOTY2IDM3LjgyNjdDNjYuMzAwMyAzNS44NzQgNzAuMjA1NyAzNC43NjI2IDc0LjczMTMgMzUuMTgwMUM3Ni44MDA2IDM1LjM3MDUgNzguNzQxMSAzNi4yMzYzIDgwLjc5ODIgMzYuNDgxOUM4MC40MzU5IDM0LjIzNDUgNzcuOTY3NCAzMy4yNzY1IDc1Ljk4NCAzMi44NTI4WiIgZmlsbD0idXJsKCNwYWludDRfbGluZWFyXzMwNzdfMjA3KSIvPgo8cGF0aCBkPSJNNzcuMzg0MSA0Ny4xNTQyQzcyLjQ3NzcgNDkuMjg1IDY5LjgxMjcgNDcuNDM2NyA2NS4zNjcgNDYuNDE3M0M2NS4xNzA1IDQ2LjM3NDMgNjQuNDAyOSA0NS45NTY4IDY0LjQ0NTkgNDYuNTQ2M0M2NC41MTM0IDQ3LjQ3OTYgNzAuNDMyOSA1MC4xMTM5IDcxLjUzODIgNTAuNDM5NEM3NC4wMTkgNTEuMTcwMSA3Ny45Nzk3IDUxLjk0MzggODAuMjUxNyA1MC41NjgzTDc3LjA0MDIgNDkuMjI5N0M3Ny40MTQ4IDQ4Ljg3MzUgODAuMTIyOCA0Ni4yODIyIDc5LjcxNzUgNDUuODc3Qzc4LjgzMzIgNDYuMDg1NyA3OC4yNDk5IDQ2Ljc3OTYgNzcuMzc3OSA0Ny4xNTQySDc3LjM4NDFaIiBmaWxsPSJ1cmwoI3BhaW50NV9saW5lYXJfMzA3N18yMDcpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMzA3N18yMDciIHgxPSIzNS4zMTI5IiB5MT0iNC4zMTE1MiIgeDI9IjM1LjMxMjkiIHkyPSIxNDYuOTY5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGNEQzOEMiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRDlCMjVGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQxX2xpbmVhcl8zMDc3XzIwNyIgeDE9Ijc0LjM2ODUiIHkxPSIwIiB4Mj0iNzQuMzY4NSIgeTI9IjEyMS40NzQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0Y0RDM4QyIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNEOUIyNUYiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDJfbGluZWFyXzMwNzdfMjA3IiB4MT0iNjAuMDYzMSIgeTE9IjUyLjg0NjciIHgyPSI2MC4wNjMxIiB5Mj0iMTY5LjczMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjRjREMzhDIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0Q5QjI1RiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50M19saW5lYXJfMzA3N18yMDciIHgxPSI0NS45Mjc5IiB5MT0iODMuOTM4NSIgeDI9IjQ1LjkyNzkiIHkyPSIxNjkuMjA5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGNEQzOEMiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRDlCMjVGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQ0X2xpbmVhcl8zMDc3XzIwNyIgeDE9IjcxLjU0NzQiIHkxPSIzMi41NjI1IiB4Mj0iNzEuNTQ3NCIgeTI9IjM3LjgyNjciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0Y0RDM4QyIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNEOUIyNUYiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDVfbGluZWFyXzMwNzdfMjA3IiB4MT0iNzIuMzQ3OSIgeTE9IjQ1Ljg3NyIgeDI9IjcyLjM0NzkiIHkyPSI1MS4zMjc2IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGNEQzOEMiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRDlCMjVGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg==" alt="Símbolo do Let's Liss">
+  <div><div class="nome">Let's Liss</div><div class="sub">Radar de Mercado</div></div>
+</div>
+<header class="capa">
+  <div class="eyebrow">Edição 1</div>
+  <h1>O que mudou no mercado <em>nesta semana</em></h1>
+  <div class="meta"><span>30/09/2026</span><span>Período: 20/09 a 30/09/2026, mais o estrutural de setembro</span><span>Estreia em rodada manual; próximas toda segunda às 7h</span></div>
+  <div class="legend"><span>[FATO] confirmado em fonte</span><span>[INFERÊNCIA] conclusão minha a partir de fatos</span><span>[HIPÓTESE] suspeita a verificar</span></div>
+</header>
+
+
+<p class="intro">Robson, primeira leitura direta: das dezenas de "tendências 2026" que a imprensa de beleza repete, quase nada muda uma decisão do Let's Liss esta semana. Três coisas mudam: uma cobrança nova do WhatsApp que começa amanhã, uma consumidora mais apertada entrando no quarto trimestre, e um dado velho, mas que ninguém no setor enfrenta, sobre com quem a cliente cria vínculo. O resto é acompanhar ou ignorar.</p>
+
+<div class="leitura">
+  <h2>Minha leitura para o Let's Liss</h2>
+  <ol>
+    <li><div><strong>WhatsApp cobra a partir de amanhã.</strong> Confirmar hoje o método de pagamento da conta oficial e, na semana, o volume de setembro. Depois, uma regra simples para a Central e para as automações: uma mensagem bem escrita onde hoje vão três. É o único item desta edição com prazo.</div></li>
+    <li><div><strong>A cliente entra no quarto trimestre com menos confiança do que em qualquer momento desde 2022.</strong> Não é hora de desconto; é hora de combo, parcelamento e Club mais visíveis no diagnóstico e na Central, e de olhar toda semana o ciclo de retorno e a taxa de "preciso remarcar". Experimento para levar à discussão: em outubro, a Central apresenta parcelamento e combo antes de qualquer conversa de preço, e comparamos a conversão do diagnóstico com setembro.</div></li>
+    <li><div><strong>Sete em cada dez clientes seguem a profissional quando ela sai.</strong> O Let's Liss foi desenhado contra isso, mas ninguém mediu. Uma consulta no painel responde: das clientes atendidas por especialistas que saíram nos últimos 12 meses, quantas voltaram em 120 dias? O número diz se o método protege a base ou se o vínculo ainda mora na pessoa.</div></li>
+  </ol>
+</div>
+
+<ul class="indice">
+  <li><span class="tag agir">Agir</span><a href="#t1">WhatsApp API cobra mensagens de serviço a partir de 01/10</a></li>
+  <li><span class="tag agir">Agir</span><a href="#t2">Consumidora mais apertada no quarto trimestre</a></li>
+  <li><span class="tag inv">Investigar</span><a href="#t3">O vínculo é com a profissional, não com o salão</a></li>
+  <li><span class="tag inv">Investigar</span><a href="#t4">Meta One e Meta Business Agent</a></li>
+  <li><span class="tag inv">Investigar</span><a href="#t5">Busca local mudando: Modo IA e Instagram Map</a></li>
+  <li><span class="tag acomp">Acompanhar</span><a href="#t6">Regulação dos alisantes</a></li>
+  <li><span class="tag acomp">Acompanhar</span><a href="#t7">Narrativa do cabelo natural e longevidade do fio</a></li>
+  <li><span class="tag acomp">Acompanhar</span><a href="#t8">Estabilidade do GoHighLevel</a></li>
+  <li><span class="tag acomp">Acompanhar</span><a href="#t9">7 em 10 salões sem sistema de gestão (Acelerador)</a></li>
+  <li><span class="tag ign">Ignorar</span><a href="#t10">Head spa, Pix Automático, reforma tributária, Threads</a></li>
+</ul>
+
+<section class="tema" id="t1">
+  <span class="tag agir">Agir</span>
+  <h2>1. A partir de 01/10/2026 a API do WhatsApp cobra as mensagens de serviço</h2>
+  <h3>O que mudou</h3>
+  <ul>
+    <li><span class="rot">Fato</span>A Meta confirmou que, a partir de 01/10/2026, passa a cobrar por mensagem as "mensagens de serviço" (texto livre enviado pela empresa dentro da janela de 24h, seja por atendente humano, seja por IA de terceiro) e também os templates de utilidade enviados dentro dessa janela. Até 30/09 as duas coisas eram gratuitas. A janela gratuita de 72h aberta por anúncio click-to-WhatsApp continua sem custo.</li>
+    <li><span class="rot">Fato, reportado pela imprensa</span>Cada número recebe franquia de 1.000 mensagens de serviço grátis por mês; a cobrança começa na 1.001ª. No Brasil, o rate card em reais (vigente desde 01/07/2026) marca R$ 0,3217 por mensagem de marketing e R$ 0,035 por mensagem de utilidade, autenticação e, a partir de amanhã, serviço.</li>
+    <li><span class="rot hip">Hipótese</span>Blogs de fornecedores dizem que a WABA precisa ter método de pagamento configurado até 30/09 e que, sem isso, a Meta para de entregar mensagens de serviço em 01/10. Não encontrei essa regra na página oficial da Meta. Vale conferir hoje, não vale dormir contando com isso.</li>
+  </ul>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>O Let's Liss opera o WhatsApp oficial pelo GoHighLevel, com três atendentes remotas e automações para duas unidades. É muito provável que o volume passe de 1.000 mensagens de serviço por número por mês. O custo em reais é pequeno (5.000 mensagens excedentes custam cerca de R$ 175). O risco real não é o valor, são dois outros: interrupção de entrega se a conta não estiver com pagamento em dia, num canal que é a porta de entrada da demanda; e automações que disparam três ou quatro mensagens onde cabia uma, agora com custo unitário, e sem ninguém olhando a fatura.</p>
+  <h3>Impacto no Let's Liss</h3>
+  <p>Central de Atendimento e automações do GHL passam a ter custo variável por mensagem. Nada muda na estratégia; muda o hábito.</p>
+  <h3>O que fazer agora</h3>
+  <ol>
+    <li>Hoje: confirmar no Gerenciador do WhatsApp (Meta Business) se a WABA das unidades tem método de pagamento ativo e em qual moeda. Se a cobrança passa pela carteira do GHL, confirmar saldo lá. Tarefa para o Codex, que opera o painel do GHL.</li>
+    <li>Esta semana: pedir ao Codex ou à agência o volume de mensagens de serviço enviadas em setembro por número. Isso diz se a franquia cobre ou não.</li>
+    <li>Revisar as automações que mandam mensagens em sequência (confirmação, lembrete, pós-atendimento) e juntar o que dá para juntar em uma mensagem. Quem responde mais em menos mensagens paga menos e incomoda menos.</li>
+    <li>Olhar a primeira fatura de outubro com atenção. Se o número surpreender, viramos isso em regra de operação para a Central.</li>
+  </ol>
+  <div class="fontes">Fontes: <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages">Meta, pricing de mensagens não-template</a> · <a href="https://www.em.com.br/economia/2026/09/7496076-whatsapp-business-tera-novas-taxas-a-partir-de-outubro-entenda-as-mudancas.html">Estado de Minas, 08/09/2026</a> · <a href="https://wizebot.com.br/blog/tabela-precos-whatsapp-business-api-2026">Tabela em reais (Wizebot, 01/09/2026)</a></div>
+</section>
+
+<section class="tema" id="t2">
+  <span class="tag agir">Agir</span>
+  <h2>2. Consumidora mais apertada entrando no quarto trimestre</h2>
+  <h3>O que mudou</h3>
+  <ul>
+    <li><span class="rot">Fato</span>O Índice de Confiança do Consumidor da FGV caiu pela quinta vez seguida em setembro, para 84,2 pontos, o menor nível desde novembro de 2022. As expectativas (85,2) estão no menor patamar desde maio de 2022.</li>
+    <li><span class="rot">Fato</span>No setor de serviços, a situação atual melhorou, mas as expectativas caíram 2,7 pontos em setembro, maior queda desde julho.</li>
+    <li><span class="rot">Fato</span>O consumidor de beleza de 2026 é descrito como "mais racional, digital e seletivo", que calcula custo por aplicação e faz "indulgência seletiva": mantém beleza no orçamento, mas reorganiza prioridades.</li>
+    <li><span class="rot">Fato</span>Na pesquisa da Beauty Fair com 560 clientes de salão (abril/2025): 87% aderem a combos promocionais e 55% só contratam serviço com desconto.</li>
+  </ul>
+  <blockquote>"As condições financeiras continuam apertadas, com alto endividamento e inadimplência." Rodolpho Tobler, economista da FGV, 24/09/2026.</blockquote>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>Alisamento é ticket alto e adiável. Quando a expectativa de renda piora, a cliente não abandona, ela estica o ciclo ("mais um mês com o que tenho") e fica mais sensível a preço. Isso chega justamente no trimestre em que a demanda deveria ser a maior do ano. O sintoma aparece antes no "preciso remarcar" e no ciclo de retorno do que na receita.</p>
+  <h3>Impacto no Let's Liss</h3>
+  <p>Pressão por desconto no balcão e na Central. Risco de ciclo de retorno esticando em outubro e novembro sem que ninguém perceba, porque o mês fecha bem por causa da sazonalidade.</p>
+  <h3>O que fazer agora</h3>
+  <ol>
+    <li>Não responder com desconto puro. O Let's Liss já tem os instrumentos certos para esse momento: combos de campanha, parcelamento, cashback do Club. É hora de deixá-los mais visíveis no diagnóstico e na Central, não de baixar a tabela.</li>
+    <li>Acompanhar toda semana, nas duas unidades, dois números do próprio painel: ciclo médio de retorno das clientes ativas e taxa de "preciso remarcar" sobre agendamentos. Se os dois piorarem juntos por três semanas, é a renda, não a operação.</li>
+    <li>Experimento para discutir: em outubro, na Central, apresentar sempre a opção de parcelamento e o combo antes de qualquer conversa sobre preço, e medir a conversão do diagnóstico em procedimento contra setembro. Custo zero, aprende rápido.</li>
+  </ol>
+  <div class="fontes">Fontes: <a href="https://www.infomoney.com.br/economia/confianca-do-consumidor-no-brasil-cai-em-setembro-para-menor-nivel-em-quase-4-anos/">InfoMoney, 24/09/2026</a> · <a href="https://br.advfn.com/jornal/2026/09/confianca-de-servicos-recua-em-setembro-e-expectativas-apontam-maior-cautela">ADVFN/FGV, confiança de serviços</a> · <a href="https://negociosdebeleza.beautyfair.com.br/mais-racional-digital-e-seletivo-o-consumidor-de-beleza-que-esta-transformando-o-varejo/">Negócios de Beleza, 29/05/2026</a> · <a href="https://negociosdebeleza.beautyfair.com.br/72-dos-clientes-acompanham-seus-cabeleireiros-quando-eles-mudam-de-salao/">Pesquisa Beauty Fair, Hair Summit 2025</a></div>
+</section>
+
+<section class="tema" id="t3">
+  <span class="tag inv">Investigar</span>
+  <h2>3. O vínculo da cliente é com a profissional, não com o salão (e o que isso custa quando alguém sai)</h2>
+  <h3>O que mudou</h3>
+  <ul>
+    <li>Nada de novo no mercado. O dado é de abril de 2025, mas é a primeira edição do radar e ele é estrutural demais para deixar de fora.</li>
+    <li><span class="rot">Fato</span>72% das clientes acompanham a profissional quando ela muda de salão; 86% confiam mais na profissional do que em influenciadores; 91% querem indicação de produto da cabeleireira; 66% preferem agendar por link ou app; 72% gostariam de agendar fora do horário comercial. Pesquisa Beauty Fair, 560 clientes e 104 profissionais.</li>
+  </ul>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>O Let's Liss trabalha com especialistas parceiras MEI. Se o padrão do mercado vale aqui, cada saída de especialista carrega uma fatia da base. O modelo do Let's Liss foi desenhado contra isso (diagnóstico, protocolo por cliente registrado no painel, Lista da Vez, cultura), mas eu não vi evidência de que isso foi medido.</p>
+  <p><span class="rot">Inferência</span>Os 66% que preferem agendar por link e os 72% que querem agendar fora do horário reforçam que a Central humana no WhatsApp é forte, mas deixa demanda de madrugada e fim de semana esperando. Isso é argumento para o LISS 2.0, que já existe como frente; não é argumento para comprar mais uma ferramenta.</p>
+  <h3>Impacto no Let's Liss</h3>
+  <p>Risco de churn concentrado em pessoas, não em preço. É o risco mais caro e o menos visível.</p>
+  <h3>O que fazer agora</h3>
+  <ol>
+    <li>Medir com o que já existe: pegar as saídas de especialistas dos últimos 12 meses e ver quantas das clientes atendidas por elas voltaram ao Let's Liss em até 120 dias. Se o número for bom, o modelo funciona e vira argumento de cultura; se for ruim, sabemos onde está o vazamento. Isso é uma consulta no painel, não um projeto.</li>
+    <li>Levar para discussão: o protocolo da cliente é do Let's Liss ou da especialista? Na prática do balcão, a ficha e o histórico ficam no painel; na cabeça da cliente, ficam na pessoa. A régua de "protocolo por cliente" só vira proteção se a cliente souber que existe.</li>
+  </ol>
+  <div class="fontes">Fonte: <a href="https://negociosdebeleza.beautyfair.com.br/72-dos-clientes-acompanham-seus-cabeleireiros-quando-eles-mudam-de-salao/">Negócios de Beleza, pesquisa Beauty Fair (Hair Summit 2025)</a></div>
+</section>
+
+<section class="tema" id="t4">
+  <span class="tag inv">Investigar</span>
+  <h2>4. Meta One e o Meta Business Agent (15/09) mudam o custo do "atendimento por IA" para o pequeno salão</h2>
+  <h3>O que mudou</h3>
+  <ul>
+    <li><span class="rot">Fato</span>A Meta lançou em 15/09/2026 o Meta One, assinatura paga com planos para pequenas empresas de US$ 14,99 a US$ 499 por mês. O plano de US$ 14,99 traz o Meta Business Agent, IA que responde mensagens, agenda, qualifica e recomenda.</li>
+    <li><span class="rot">Fato</span>O Meta Business Agent foi anunciado em 03/06/2026, com teste prévio no Brasil, e recebeu cobrança por token a partir de 01/08.</li>
+    <li><span class="rot">Fato, reportado por blogs de mídia paga</span>O Meta One passa a cobrar por ferramentas que eram gratuitas: Competitive Insights, Custom Audience Insights, histórico estendido de insights com exportação, agendamento de conteúdo.</li>
+  </ul>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>Para o Let's Liss, o agente da Meta não substitui nada: a operação roda no GHL e o LISS 2.0 é o agente próprio. O que muda é o mercado ao redor: qualquer salão de bairro passa a ter atendimento 24h por US$ 15. "Responder rápido" deixa de ser diferencial; "diagnóstico e protocolo certos" continuam sendo. Isso é bom para quem tem método.</p>
+  <p><span class="rot hip">Hipótese</span>A agência pode estar usando ferramentas que o Meta One passou a cobrar (agendamento de conteúdo, insights estendidos). Se houver um custo novo ou uma perda de relatório, aparece na próxima reunião mensal sem ninguém ter avisado.</p>
+  <h3>O que fazer agora</h3>
+  <ol>
+    <li>Perguntar à agência, em uma linha: alguma ferramenta que vocês usam para o Let's Liss ficou atrás do Meta One? Se sim, quanto custa e o que muda.</li>
+    <li>Não assinar nada por reflexo. Não há problema real que o Business Agent resolva hoje que a Central e o LISS 2.0 não estejam resolvendo.</li>
+  </ol>
+  <div class="fontes">Fontes: <a href="https://www.engadget.com/2258403/meta-adds-new-subscription-tiers-for-businesses-creators-and-ai-power-users/">Engadget</a> · <a href="https://www.technology.org/2026/09/16/meta-one-subscription-ai-plans-pricing/">Technology.org, 16/09/2026</a> · <a href="https://about.fb.com/br/news/2026/06/conversations-2026-apresentamos-o-meta-business-agent/">Meta Brasil, 03/06/2026</a> · <a href="https://zenvia.com/blog/novas-regras-de-cobranca-do-whatsapp-business-2026/">Zenvia</a> · <a href="https://adsuploader.com/blog/meta-ads-updates">Meta Ads updates, setembro/2026</a></div>
+</section>
+
+<section class="tema" id="t5">
+  <span class="tag inv">Investigar</span>
+  <h2>5. Busca local está mudando: Modo IA do Google em português e Instagram Map</h2>
+  <h3>O que mudou</h3>
+  <ul>
+    <li><span class="rot">Fato</span>O Google liberou o Modo IA em português para todos os usuários do Brasil; em maio/2026 a ferramenta passou de 1 bilhão de usuários por mês.</li>
+    <li><span class="rot">Inferência, com base em estimativas de agências</span>Onde o Modo IA responde, os cliques nos resultados tradicionais caem entre 25% e 34%; em buscas locais, a resposta cruza Perfil da Empresa, avaliações e dados do site e recomenda dois ou três nomes. Tratar os percentuais como estimativa.</li>
+    <li><span class="rot">Fato</span>O Instagram Map dá destaque a negócios locais para quem está na região.</li>
+  </ul>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>A demanda do Let's Liss vem majoritariamente de tráfego pago e WhatsApp. A busca orgânica "alisamento em Curitiba" é provavelmente um canal menor, mas é o mais barato que existe e é onde a cliente que já ouviu falar vai confirmar. Se a IA responde "melhor salão de alisamento em Curitiba" com três nomes, estar entre eles depende de volume e recência de avaliações e de um perfil completo. Não depende de tecnologia nova.</p>
+  <h3>O que fazer agora</h3>
+  <ol>
+    <li>Teste de cinco minutos: buscar no Modo IA "melhor alisamento em Curitiba" e "alisamento em São José dos Pinhais" e ver quem aparece.</li>
+    <li>Olhar o Perfil da Empresa das duas unidades: avaliações dos últimos 90 dias, serviços listados, fotos, horário.</li>
+    <li>Se as avaliações estiverem paradas, ligar isso à pesquisa de satisfação que já existe: quem dá nota 9 ou 10 recebe o pedido de avaliação no Google. Uma mensagem a mais na régua que já roda, sem ferramenta nova.</li>
+  </ol>
+  <div class="fontes">Fontes: <a href="https://startupi.com.br/google-libera-modo-ia-no-brasil/">Startupi</a> · <a href="https://pulsecriative.com.br/blog/ai-mode-google-1-bilhao-usuarios-o-que-muda-pro-seu-negocio">Pulse Criative (agência)</a> · <a href="https://conteudos.hublocal.com.br/nova-arquitetura-google-ia-negocios-locais/">HubLocal (agência)</a> · <a href="https://www.bagy.com.br/blog/atualizacao-do-instagram/">Bagy, atualizações do Instagram</a></div>
+</section>
+
+<section class="tema" id="t6">
+  <span class="tag acomp">Acompanhar</span>
+  <h2>6. Regulação dos alisantes segue apertando, sem fato novo nas últimas semanas</h2>
+  <h3>O que mudou</h3>
+  <ul>
+    <li>Não encontrei ação nova da Anvisa entre 20/09 e 30/09/2026. O quadro estrutural é este:</li>
+    <li><span class="rot">Fato</span>Informe de Segurança GGMON 03/2025 (07/07/2025): formol proibido como alisante (permitido só como conservante até 0,2%); ácido glioxílico "não autorizado para alisamento e em reavaliação de segurança".</li>
+    <li><span class="rot">Fato</span>Em 06/01/2026 a Anvisa proibiu diversos alisantes de marcas conhecidas em salões por falta de registro, com recolhimento e suspensão de uso também em salões.</li>
+    <li><span class="rot">Fato</span>A França pediu à União Europeia a proibição do ácido glioxílico em alisantes por casos de insuficiência renal aguda (caso descrito no New England Journal of Medicine).</li>
+  </ul>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>Cada onda de notícia derruba a confiança na "progressiva" genérica e sobe o valor de quem prova segurança: diagnóstico, produto registrado, teste de mecha, transparência. Isso favorece o Let's Liss. O evento que mudaria o jogo seria a Anvisa concluir a reavaliação do ácido glioxílico com restrição, porque muitas linhas vendidas como "sem formol" são glioxílico.</p>
+  <h3>O que fazer agora</h3>
+  <ul>
+    <li>Nada novo. Manter a régua: todo produto em uso com registro ou notificação conferível na Anvisa, e isso dito à cliente como padrão da casa, não como medo. Quando sair a reavaliação do glioxílico, este tema vira AGIR no mesmo dia.</li>
+    <li>Pergunta para a Direção responder internamente, sem pressa: qual é o ativo alisante de cada linha (tradicional e orgânica) e o que muda se o glioxílico for restrito.</li>
+  </ul>
+  <div class="fontes">Fontes: <a href="https://www.gov.br/anvisa/pt-br/assuntos/fiscalizacao-e-monitoramento/informes-de-seguranca/informe-de-seguranca-ggmon-no-03-2025-cosmetovigilancia">Anvisa, Informe GGMON 03/2025</a> · <a href="https://www.correiobraziliense.com.br/aqui/2026/01/06/anvisa-proibe-diversos-alisantes-e-saneantes-saiba-quais/">Correio Braziliense, 06/01/2026</a> · <a href="https://www.portaltela.com/saude/saude-publica/2025/01/23/franca-pede-a-ue-que-proiba-produtos-de-alisamento-com-acido-glioxilico-devido-a-riscos-a-saude">Portal Tela, França e UE</a> · <a href="https://abcdt.org.br/acido-glioxilico-entenda-o-que-e-a-substancia-usada-em-alisamento-no-cabelo-e-que-levou-consultora-a-uti/">ABCDT, ácido glioxílico</a></div>
+</section>
+
+<section class="tema" id="t7">
+  <span class="tag acomp">Acompanhar</span>
+  <h2>7. A narrativa "cabelo natural é o novo luxo" e a indústria empurrando "longevidade do fio"</h2>
+  <h3>O que mudou</h3>
+  <ul>
+    <li><span class="rot">Fato</span>A ABIHPEC publicou em 10/09/2026 as seis verticais de inovação capilar para 2026: scalp care, longevidade do fio, microbioma, personalização por IA, sustentabilidade e novos formatos (head spa).</li>
+    <li><span class="rot">Fato</span>Matérias de tendência ao longo de 2026 repetem o mesmo enredo: valorização de textura natural e tratamentos "substituindo a progressiva".</li>
+    <li><span class="rot">Fato</span>Cabelo segue sendo 53,8% das vendas do canal perfumaria no Brasil.</li>
+  </ul>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>Isso é tendência editorial e de marketing de produto, não dado de demanda. Não encontrei nenhuma evidência de queda na procura por alisamento no Brasil. O risco é de narrativa: "alisar = agredir" ganha espaço, e quem vende "liso perfeito" fica do lado errado da história. O posicionamento do Let's Liss (alisamento personalizado por nível, diagnóstico, pré-química) já responde a isso; o que pode faltar é a linguagem.</p>
+  <h3>O que fazer agora</h3>
+  <ul>
+    <li>Conferir com a agência se os criativos falam de saúde e longevidade do fio ou só de resultado liso. É ajuste de palavra, não de oferta.</li>
+    <li>Acompanhar no próprio painel a proporção entre níveis (Soft, Essential, High) e a procura pela linha orgânica. Se o Soft e a orgânica crescerem, a narrativa está chegando na cliente.</li>
+  </ul>
+  <div class="fontes">Fontes: <a href="https://abihpec.org.br/tendencias-inovacao-cuidados-capilares-2026/">ABIHPEC, 10/09/2026</a> · <a href="https://revistaoeste.com/oestegeral/2026/01/13/as-5-tendencias-de-cabelo-para-2026-que-vao-bombar/">Revista Oeste, 13/01/2026</a> · <a href="https://portalleodias.com/diversos/2026/04/21/chega-de-progressiva-olha-o-que-ta-dominando-2026/">Portal Leo Dias, 21/04/2026</a> · <a href="https://negociosdebeleza.beautyfair.com.br/mais-racional-digital-e-seletivo-o-consumidor-de-beleza-que-esta-transformando-o-varejo/">Negócios de Beleza, 29/05/2026</a></div>
+</section>
+
+<section class="tema" id="t8">
+  <span class="tag acomp">Acompanhar</span>
+  <h2>8. Estabilidade do GoHighLevel</h2>
+  <ul>
+    <li><span class="rot">Fato</span>A página de status registrou degradação de 02 a 04/09/2026 (tarefas e conversas não carregando, não lidas fora de ordem) e relatos de usuários com lentidão em 18/09. Em 30/09 todos os componentes constam como operacionais.</li>
+    <li><span class="rot">Inferência</span>Combina com a instabilidade de tela que a Central sentiu em setembro. Não é tendência, é fornecedor. O único cuidado é manter documentado o plano B da Central para quando a tela cair: número alternativo, o que dizer à cliente, quem avisa quem.</li>
+  </ul>
+  <div class="fontes">Fonte: <a href="https://statusgator.com/services/highlevel">StatusGator, HighLevel</a></div>
+</section>
+
+<section class="tema" id="t9">
+  <span class="tag acomp">Acompanhar</span>
+  <h2>9. Para o Acelerador de Salões: 7 em cada 10 salões não usam sistema de gestão</h2>
+  <ul>
+    <li><span class="rot">Fato</span>Levantamento do Sebrae divulgado em 18/09/2026: menos de 30% dos salões, barbearias, clínicas e spas usam sistema de gestão integrado; o país tem mais de 1,1 milhão de pequenos negócios de beleza, cerca de 230 mil CNPJs novos por ano, a maioria faturando menos de R$ 50 mil por mês.</li>
+    <li><span class="rot">Fato</span>Inadimplência dos pequenos negócios caiu de 28% para 25% entre o primeiro trimestre e julho; aprovação de crédito no maior nível desde 2022.</li>
+    <li><span class="rot">Inferência</span>Para o salão, nada a fazer: o painel próprio já é vantagem. Para o Acelerador, é a confirmação de que a dor de "gestão básica" é de massa e que o dono de salão médio fatura menos do que o discurso do mercado sugere. Conteúdo e oferta precisam falar com quem fatura R$ 30 mil, não com quem fatura R$ 300 mil.</li>
+  </ul>
+  <div class="fontes">Fontes: <a href="https://www.em.com.br/networking-e-negocios/2026/09/7503439-pesquisa-aponta-que-7-em-cada-10-saloes-e-clinicas-de-beleza-ainda-nao-usam-sistema-de-gestao.html">Estado de Minas, 18/09/2026</a> · <a href="https://www.portaldacapital.com/2026/09/15/inadimplencia-de-pequenos-negocios-cai-e-aprovacao-de-credito-atinge-maior-nivel-desde-2022/">Sebrae, inadimplência, 15/09/2026</a></div>
+</section>
+
+<section class="tema" id="t10">
+  <span class="tag ign">Ignorar</span>
+  <h2>10. Ignorar por enquanto</h2>
+  <ul>
+    <li><strong>Head spa como serviço de cardápio.</strong> A Beauty Fair (05 a 08/09) e a ABIHPEC o destacam, e fornecedores de móveis contam histórias de redes com 30 unidades. Confronto com as perguntas do ecossistema: qual problema real resolve no Let's Liss? Nenhum. Dilui a especialização, exige espaço e equipamento e não conversa com a transformação que o Let's Liss existe para produzir. O que vale absorver é o vocabulário de couro cabeludo dentro da pré-química e do pós, não um serviço novo.</li>
+    <li><strong>Pix Automático para assinatura de serviços.</strong> Existe, é barato, mas o Let's Liss não vende plano recorrente e o Club é cashback, não mensalidade.</li>
+    <li><strong>Reforma tributária em 2026.</strong> As alíquotas de teste (CBS 0,9% e IBS 0,1%) não alteram Simples nem MEI neste ano; a Lei do Salão Parceiro segue igual. Ruído de contabilidade, não sinal de mercado.</li>
+    <li><strong>Anúncios no Threads sem Instagram (22/09), anúncios em lives de criadores (29/09), Creator Marketing Hub (15/09).</strong> Novidades para marca de produto e criador, não para salão local.</li>
+  </ul>
+  <div class="fontes">Fontes: <a href="https://www.promoview.com.br/beauty-fair-2026-estandes-marcas/">Promoview, Beauty Fair 2026</a> · <a href="https://executivamoveis.com.br/head-spa-a-nova-tendencia-que-esta-revolucionando-os-saloes-brasileiros/">Executiva Móveis, head spa</a> · <a href="https://www.infinitepay.io/blog/pix-automatico">InfinitePay, Pix Automático</a> · <a href="https://conta4.com.br/reforma-tributaria-para-salao-de-beleza-impactos-e-como-se-preparar/">Conta4, reforma tributária</a> · <a href="https://adsuploader.com/blog/meta-ads-updates">Meta Ads updates</a></div>
+</section>
+
+<footer><span class="assin">Let's Liss</span><span>Radar de Mercado, edição 1, 30/09/2026.</span><span>Próxima edição: segunda-feira, 05/10/2026, retomando os itens marcados como INVESTIGAR.</span></footer>
+</div>
+
+</body>
+</html>
