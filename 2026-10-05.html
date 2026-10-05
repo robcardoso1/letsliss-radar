@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Radar de Mercado 2026-10-05</title>
+<style>html,body{margin:0}img{max-width:100%}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: memorando premium do Let's Liss. Preto + dourado (brandbook), leitura no topo, temas com selo, fontes ao pé. Escuro primeiro, claro em off-white. */
+:root{
+  --bg:#121110; --card:#1C1B18; --deep:#0E0D0B; --fg:#F8F8F6; --muted:#9E9A8E; --line:#2A2820;
+  --gold:#D5AC58; --gold-hi:#F5D48D; --gold-ink:#121110; --gold-soft:rgba(213,172,88,.12);
+  --pos:#4CAF7D; --neg:#E05252;
+  --display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --body:"Montserrat","Segoe UI",Helvetica,Arial,sans-serif;
+  color-scheme:dark }
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#F8F8F6; --card:#FFFFFF; --deep:#ECEAE6; --fg:#1A1814; --muted:#6B6560; --line:#E2DED4;
+  --gold:#9A7A2E; --gold-hi:#B08F3A; --gold-ink:#F8F8F6; --gold-soft:rgba(213,172,88,.16);
+  --pos:#2E8B5B; --neg:#C43D3D;
+  color-scheme:light }}
+:root[data-theme="light"]{
+  --bg:#F8F8F6; --card:#FFFFFF; --deep:#ECEAE6; --fg:#1A1814; --muted:#6B6560; --line:#E2DED4;
+  --gold:#9A7A2E; --gold-hi:#B08F3A; --gold-ink:#F8F8F6; --gold-soft:rgba(213,172,88,.16);
+  --pos:#2E8B5B; --neg:#C43D3D;
+  color-scheme:light }
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:780px;margin:0 auto;min-width:0}
+.marca{display:flex;align-items:center;gap:14px;padding-block:28px 22px;border-bottom:1px solid var(--line)}
+.marca img{width:34px;height:auto;flex:none}
+.marca .nome{font-family:var(--body);font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:13px;color:var(--gold)}
+.marca .sub{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+header.capa{padding-block:34px 26px;border-bottom:1px solid var(--line);margin-bottom:28px}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,50px);line-height:1.08;margin:12px 0 14px;text-wrap:balance;color:var(--fg)}
+h1 em{font-style:italic;color:var(--gold-hi)}
+.meta{color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 22px}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;font-size:12px;color:var(--muted)}
+.legend span{border:1px solid var(--line);border-radius:2px;padding:3px 9px;letter-spacing:.02em}
+p{margin:0 0 14px}
+.intro{font-family:var(--display);font-size:20px;line-height:1.5;color:var(--fg)}
+.intro::first-letter{color:var(--gold);font-size:1.15em}
+.leitura{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:4px;padding:24px 26px;margin:30px 0 36px;position:relative}
+.leitura h2{font-family:var(--display);font-size:26px;font-weight:500;margin:0 0 14px;color:var(--gold-hi)}
+.leitura ol{margin:0;padding:0;list-style:none;display:grid;gap:14px;counter-reset:leitura}
+.leitura li{counter-increment:leitura;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:start}
+.leitura li>div{min-width:0}
+.leitura li::before{content:counter(leitura);font-family:var(--display);font-size:26px;line-height:1;color:var(--gold);font-weight:500;padding-top:2px}
+.leitura li strong{font-weight:600;color:var(--fg)}
+.indice{display:grid;gap:8px;margin:0 0 40px;padding:0;list-style:none}
+.indice li{display:flex;gap:12px;align-items:baseline;min-width:0}
+.indice a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .15s}
+.indice a:hover,.indice a:focus-visible{border-color:var(--gold);outline:none;color:var(--gold-hi)}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;border-radius:2px;white-space:nowrap;border:1px solid transparent;font-variant-numeric:tabular-nums}
+.tag.agir{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.tag.inv{color:var(--gold);border-color:var(--gold);background:var(--gold-soft)}
+.tag.acomp{color:var(--muted);border-color:var(--muted)}
+.tag.ign{color:var(--muted);border-color:var(--line);opacity:.8}
+section.tema{border-top:1px solid var(--line);padding-top:26px;margin-top:8px;margin-bottom:40px}
+section.tema h2{font-family:var(--display);font-size:26px;line-height:1.22;margin:12px 0 18px;font-weight:500;text-wrap:balance}
+section.tema h3{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:22px 0 8px;font-weight:600}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin-bottom:9px}
+li:last-child{margin-bottom:0}
+li::marker{color:var(--gold)}
+.rot{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-right:7px}
+.rot.hip{color:var(--muted)}
+.fontes{font-size:13px;color:var(--muted);border-left:2px solid var(--gold);padding-left:12px;margin-top:18px;line-height:1.7}
+.fontes a{color:var(--muted);word-break:break-word}
+.fontes a:hover,.fontes a:focus-visible{color:var(--gold-hi)}
+blockquote{margin:0 0 16px;padding:14px 18px;background:var(--card);border-left:3px solid var(--gold);border-radius:2px;font-family:var(--display);font-style:italic;font-size:18px;line-height:1.5}
+footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
+footer .assin{font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:11px;color:var(--gold)}
+a{color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth} }
+@media (max-width:480px){ .leitura{padding:20px 18px} .leitura li{grid-template-columns:26px 1fr} .leitura li::before{font-size:22px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="marca">
+  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyIiBoZWlnaHQ9IjE3MCIgdmlld0JveD0iMCAwIDEwMiAxNzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik00NC4wNjUzIDE0Ni42ODdDNDQuMTE0NCAxNDcuMjIxIDQzLjI5MTYgMTQ2Ljg0NiA0My4wNDYgMTQ2Ljc2N0M0MC4wMDAyIDE0NS44NTIgMzYuMzAzNiAxNDQuMzE2IDMzLjM1IDE0My4wNTFDMTEuODY0MiAxMzMuODY1IC00LjE5OTU1IDExNy43NTIgMC45NzY5NDkgOTIuNDY1NUM4LjU1NDQxIDU1LjQ2ODYgNTcuNzA5NiA0NS41MjA5IDY5LjA2OTcgMTAuNjg1NEw3MC42MDQ4IDQuMzExNTJDNzEuMDcxNSAxNy44MjY5IDYzLjY5NjcgMjkuNzc2NSA1NC4yNTg2IDM4Ljc2NjJDMzUuOTEwNiA1Ni4yMzYyIDUuNzkxMTUgNzAuNjY2NSAzLjg1MDczIDk5LjM2MTNDMi4xNjIwOCAxMjQuMzQ3IDI0LjMwNSAxMzcuNjY2IDQ0LjA2NTMgMTQ2LjY4N1oiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl8zMDc3XzIwNykiLz4KPHBhdGggZD0iTTk2LjIzNTYgNzEuNTg3N0M5NS42NzA3IDY5LjIyMzYgOTMuMDM2NCA2OC44OTgyIDk1LjgzNjUgNjYuNjY5MkM5Ny45Nzk1IDY0Ljk2MjEgMTAyLjI0MSA2My41MjUyIDEwMS42NTggNjAuMDEyOEMxMDEuMzMyIDU4LjA1MzkgOTUuNjc2OCA1My4zMjU3IDk0LjA5ODcgNTEuMjA3MkM4Ny40MTc3IDQyLjI4NSA5MS4wODM3IDM2Ljc1MjMgODkuODg2MiAyNy4wMDExQzg5LjAzMjcgMjAuMDQzOCA4NC45Njc2IDEwLjk2MTkgODAuNDA1MiA1LjY1MDM0Qzc5LjQxMDQgNC40ODk3NyA3NS45NTMzIDAuOTM0Mzg3IDc0Ljc4NjYgMC4yNzczNDZDNzQuMzU2NyAwLjAzNzg2NDEgNzQuMDY4MSAtMC4wNDgxMDM5IDczLjU3MDggMC4wMjU1ODI5Qzc5LjU3MDEgOC41NzMyNSA4NS42NjE1IDE4LjY2MjIgODYuNDM1MiAyOS4zODM2Qzg2LjY2MjQgMzIuNTU4MyA4Ni4wNDg0IDM1LjY3NzcgODYuMTU4OSAzOC43Nzg3Qzg2LjQyOTEgNDYuNTQwNCA4OS45ODQ1IDUxLjc5MDYgOTQuODg0NyA1Ny40MDNDOTUuNTcyNCA1OC4xOTUyIDk4LjI2ODEgNjAuMzU2NiA5OC4xODIxIDYxLjI0N0M5OC4wMTAyIDYzLjA3MDggOTIuMDEwOSA2NS4zMDU5IDkxLjM4NDUgNjcuMzA3OEM5MC40NTEyIDcwLjI5ODIgOTMuODM0NiA3Mi4yMjAyIDkzLjAwNTcgNzQuMDE5NEM5Mi4xMjE0IDc1LjkyOTEgODcuMzgwOSA3Ni42MjkxIDg2Ljk3NTYgNzcuNjQ4NUw5MC4xNjI2IDc5LjgyMjJDOTIuMjMxOSA4MS42OTUxIDg5LjY4MzYgODIuNTQ4NyA4OC44OTE1IDg0LjEyMDZDODYuOTY5NSA4Ny45NDYyIDkyLjA3ODQgOTQuMjQ2NCA4Ni45NzU2IDk2LjQxNDFDODAuMzQ5OSA5OS4yMjY0IDY1LjE4ODkgOTMuNzc5OCA1OC42NDMgOTAuOTYxMkM1NC42NzYyIDg5LjI1NDIgNTAuOTQ4OSA4Ny4wNjgxIDQ3LjAyNTEgODUuMjg3M0M1MC4xOTk4IDg5Ljk1NDIgNTYuMTU2MSA5Mi4wMzU4IDYwLjk2NDIgOTQuNjcwMUw1OC42NzM3IDk2LjI2MDVDNTMuMjA4NiAxMDMuMDk1IDUxLjM3MjYgMTEzLjAxOCA1My40NjA0IDEyMS40NzRMNTQuNjA4NyAxMTMuMTFDNTUuNTIzNiAxMDguNTU0IDU2LjgxOTMgMTAzLjgzMiA1OS4zNDkyIDk5Ljg4OTZDNjAuMTc4MiA5OC42MDAxIDYyLjM3MDQgOTUuODM2OCA2NC4wMjIyIDk2LjAwODhDNjUuMjMxOSA5Ni4xMzE2IDY4LjgxOCA5Ny45MTg1IDcwLjUwNjYgOTguMzk3NUM3NS45Nzc5IDk5Ljk1MSA4OC40MDAyIDEwMi41NzMgOTEuNDU4MiA5Ni4wNzAyQzkzLjA1NDggOTIuNjc0NCA5MS40NzA1IDg5Ljg1NTkgOTEuMjg2MyA4Ni43MTgxQzkxLjE0NTEgODQuMzQ3OCA5Mi42NjE4IDg0LjM5NyA5My41ODI5IDgyLjkxMUM5NC44NjYyIDgwLjgzNTQgOTQuMTE3MSA3OS4zODAxIDkyLjYwNjUgNzcuNzgzNkM5NS4wNjg5IDc2LjczMzUgOTYuOTExIDc0LjQxMjQgOTYuMjQxNyA3MS41OTM5TDk2LjIzNTYgNzEuNTg3N1oiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcl8zMDc3XzIwNykiLz4KPHBhdGggZD0iTTkwLjk0ODYgMTQ1Ljc4NEM4MC41NTg3IDEyNS40MDQgNDUuMjMyMSAxMzMuNzM2IDM0LjE4NTIgMTA5LjI0MkMyNS44Mjc5IDkwLjcwOTQgMzUuNjQ2NiA2OC41MDUxIDQ3LjE0NzkgNTMuNjQ1QzQ3LjMxMzcgNTMuNDMgNDcuODcyNSA1My4xMjkxIDQ3LjQxODEgNTIuODQ2N0MzMy4xMTY3IDY2LjIzMzEgMjIuNjEwMiA4Ni45Njk4IDI5LjEyNTMgMTA2Ljc5MkMzMi45NTA5IDExOC40MjIgNDEuNzI1OCAxMjUuMjM4IDUyLjg0NjQgMTI5LjQ1NkM2NC41ODEgMTMzLjkwOCA4NC4zMDQ1IDEzNS45OTYgODkuMzE1MiAxNDkuNTYxQzkyLjQwMzkgMTU3LjkyNCA4OC41NzIyIDE2My4zNDYgODIuOTcyIDE2OC44MjRDODIuNjg5NSAxNjkuMSA4Mi4yOTA0IDE2OS4yMSA4Mi40MTMyIDE2OS43MzJDOTEuNzY1MyAxNjUuNTA4IDk1LjcwNzUgMTU1LjEwNiA5MC45NTQ3IDE0NS43NzJMOTAuOTQ4NiAxNDUuNzg0WiIgZmlsbD0idXJsKCNwYWludDJfbGluZWFyXzMwNzdfMjA3KSIvPgo8cGF0aCBkPSJNNzMuNjAxNCAxNTQuODE2QzY3Ljg0NzcgMTQ0LjY4NSA1My40OTcyIDE0MS4wNTUgNDMuNzg5IDEzNS44M0MyNS44NjQ3IDEyNi4xODMgMTUuNjY1MiAxMTEuNDg5IDE5LjI1NzQgOTAuMzcxMkMxOS41ODI5IDg4LjQ0OTIgMjAuMTkwOCA4Ni42NDM5IDIwLjYyMDYgODQuNzU4N0MyMC42ODIgODQuNDg4NiAyMC45NzY4IDgzLjg4NjggMjAuNDczMyA4My45NDJDMTYuMDA5MSA5My42MzE5IDE1LjAwMiAxMDMuOTQyIDE4LjU4ODEgMTE0LjExMUMyMy4xNjkgMTI3LjEwNCAzMy45NzY0IDEzNC42NjkgNDUuODQ2MSAxNDAuNDc4QzU0Ljg5MTEgMTQ0LjkwNiA2OC44NjA5IDE0OS4xMTIgNzIuNjkyNiAxNTkuNDgzQzc0LjA2MiAxNjMuMTkyIDczLjQ1NDEgMTY0Ljc1MiA3Mi44NzY5IDE2OC4zOTNDNzIuODMzOSAxNjguNjc2IDcyLjUyMDcgMTY5LjI3MSA3My4wMTgxIDE2OS4yMDRDNzUuODEyIDE2NC4zOSA3Ni40MjYxIDE1OS43OTYgNzMuNjAxNCAxNTQuODE2WiIgZmlsbD0idXJsKCNwYWludDNfbGluZWFyXzMwNzdfMjA3KSIvPgo8cGF0aCBkPSJNNzUuOTg0IDMyLjg1MjhDNzAuODg3MyAzMS43NTM3IDY1LjU1NzMgMzMuODUzOCA2Mi4yOTY2IDM3LjgyNjdDNjYuMzAwMyAzNS44NzQgNzAuMjA1NyAzNC43NjI2IDc0LjczMTMgMzUuMTgwMUM3Ni44MDA2IDM1LjM3MDUgNzguNzQxMSAzNi4yMzYzIDgwLjc5ODIgMzYuNDgxOUM4MC40MzU5IDM0LjIzNDUgNzcuOTY3NCAzMy4yNzY1IDc1Ljk4NCAzMi44NTI4WiIgZmlsbD0idXJsKCNwYWludDRfbGluZWFyXzMwNzdfMjA3KSIvPgo8cGF0aCBkPSJNNzcuMzg0MSA0Ny4xNTQyQzcyLjQ3NzcgNDkuMjg1IDY5LjgxMjcgNDcuNDM2NyA2NS4zNjcgNDYuNDE3M0M2NS4xNzA1IDQ2LjM3NDMgNjQuNDAyOSA0NS45NTY4IDY0LjQ0NTkgNDYuNTQ2M0M2NC41MTM0IDQ3LjQ3OTYgNzAuNDMyOSA1MC4xMTM5IDcxLjUzODIgNTAuNDM5NEM3NC4wMTkgNTEuMTcwMSA3Ny45Nzk3IDUxLjk0MzggODAuMjUxNyA1MC41NjgzTDc3LjA0MDIgNDkuMjI5N0M3Ny40MTQ4IDQ4Ljg3MzUgODAuMTIyOCA0Ni4yODIyIDc5LjcxNzUgNDUuODc3Qzc4LjgzMzIgNDYuMDg1NyA3OC4yNDk5IDQ2Ljc3OTYgNzcuMzc3OSA0Ny4xNTQySDc3LjM4NDFaIiBmaWxsPSJ1cmwoI3BhaW50NV9saW5lYXJfMzA3N18yMDcpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMzA3N18yMDciIHgxPSIzNS4zMTI5IiB5MT0iNC4zMTE1MiIgeDI9IjM1LjMxMjkiIHkyPSIxNDYuOTY5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGNEQzOEMiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRDlCMjVGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQxX2xpbmVhcl8zMDc3XzIwNyIgeDE9Ijc0LjM2ODUiIHkxPSIwIiB4Mj0iNzQuMzY4NSIgeTI9IjEyMS40NzQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0Y0RDM4QyIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNEOUIyNUYiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDJfbGluZWFyXzMwNzdfMjA3IiB4MT0iNjAuMDYzMSIgeTE9IjUyLjg0NjciIHgyPSI2MC4wNjMxIiB5Mj0iMTY5LjczMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjRjREMzhDIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0Q5QjI1RiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50M19saW5lYXJfMzA3N18yMDciIHgxPSI0NS45Mjc5IiB5MT0iODMuOTM4NSIgeDI9IjQ1LjkyNzkiIHkyPSIxNjkuMjA5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGNEQzOEMiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRDlCMjVGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQ0X2xpbmVhcl8zMDc3XzIwNyIgeDE9IjcxLjU0NzQiIHkxPSIzMi41NjI1IiB4Mj0iNzEuNTQ3NCIgeTI9IjM3LjgyNjciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0Y0RDM4QyIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNEOUIyNUYiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDVfbGluZWFyXzMwNzdfMjA3IiB4MT0iNzIuMzQ3OSIgeTE9IjQ1Ljg3NyIgeDI9IjcyLjM0NzkiIHkyPSI1MS4zMjc2IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGNEQzOEMiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRDlCMjVGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg==" alt="Símbolo do Let's Liss">
+  <div><div class="nome">Let's Liss</div><div class="sub">Radar de Mercado</div></div>
+</div>
+<header class="capa">
+  <div class="eyebrow">Edição 2</div>
+  <h1>O que mudou no mercado <em>nesta semana</em></h1>
+  <div class="meta"><span>05/10/2026</span><span>Período: 30/09 a 05/10/2026, mais o estrutural de setembro e outubro</span><span>Rodada automática de segunda-feira</span></div>
+  <div class="legend"><span>[FATO] confirmado em fonte</span><span>[INFERÊNCIA] conclusão minha a partir de fatos</span><span>[HIPÓTESE] suspeita a verificar</span></div>
+</header>
+
+
+<p class="intro">Robson, a semana tem um sinal novo que pesa mais que todo o resto: amanhã, 06/10, o Senado vota o fim da escala 6x1. Se passar, a recepção de Curitiba, que hoje fecha em 44h exatas em seis dias, precisa ser redesenhada em cerca de 60 dias. O resto é retomada: o WhatsApp pago chegou, e a notícia é melhor do que a edição 1 temia, porque o GHL tirou a própria margem. A consumidora segue apertada, agora com um segundo turno no meio do caminho. E apareceu um assunto que toca as parceiras MEI: o teto de faturamento.</p>
+
+<div class="leitura">
+  <h2>Minha leitura para o Let's Liss</h2>
+  <ol>
+    <li><div><strong>Amanhã o Senado pode acabar com a 6x1.</strong> Se passar, em cerca de 60 dias a recepção precisa de dois descansos por semana e teto de 42h, e a escala de Curitiba hoje está cravada em 44h com sábado. Não é para agir antes do voto; é para, se aprovar, ter na mesma semana o desenho das escalas novas das duas unidades e a conversa com o contador marcada. Decisão para levar à discussão: terceira pessoa, meio período no sábado ou Balcão cobrindo a ponta.</div></li>
+    <li><div><strong>O WhatsApp pago chegou e veio mais barato do que temíamos.</strong> O GHL tirou a margem de 5% e a franquia de 1.000 vale por número. Duas coisas pequenas fecham o tema: alerta de saldo da carteira ligado e confirmar com a agência se os anúncios caem direto no WhatsApp do GHL, porque aí a conversa com lead de anúncio fica grátis por 72h.</div></li>
+    <li><div><strong>O teto do MEI está em discussão, e as especialistas são MEI.</strong> Um número do painel responde se isso importa: quantas parceiras passam de R$ 6.750 de comissão média por mês em 2026. Se ninguém, esquece; se alguém, conversa com ela e com o contador antes de dezembro.</div></li>
+  </ol>
+</div>
+
+<ul class="indice">
+  <li><span class="tag agir">Agir</span><a href="#t1">Senado vota o fim da 6x1 em 06/10; a recepção está em 6x1 no teto de 44h</a></li>
+  <li><span class="tag agir">Agir</span><a href="#t2">WhatsApp pago chegou, e o GHL tirou a margem de 5%</a></li>
+  <li><span class="tag inv">Investigar</span><a href="#t3">Teto do MEI pode subir para R$ 110 mil em 2027</a></li>
+  <li><span class="tag acomp">Acompanhar</span><a href="#t4">Consumidora apertada, com eleição até 25/10</a></li>
+  <li><span class="tag acomp">Acompanhar</span><a href="#t5">Alisantes: a mídia voltou ao formol, a regra não mudou</a></li>
+  <li><span class="tag acomp">Acompanhar</span><a href="#t6">Meta Business Agent como régua de custo do LISS 2.0</a></li>
+  <li><span class="tag acomp">Acompanhar</span><a href="#t7">Retomadas sem fato novo</a></li>
+  <li><span class="tag ign">Ignorar</span><a href="#t8">Compra por live, manchetes de R$ 140 bilhões</a></li>
+</ul>
+
+<section class="tema" id="t1">
+  <span class="tag agir">Agir</span>
+  <h2>1. O Senado vota amanhã (06/10) o fim da escala 6x1, e a recepção do Let's Liss trabalha em 6x1 no teto de 44h</h2>
+  <h3>O que mudou</h3>
+  <ul>
+    <li><span class="rot">Fato</span>O presidente do Senado marcou para terça, 06/10/2026, a votação em Plenário da PEC 221/2019, que acaba com a escala 6x1, garante dois dias de descanso remunerado por semana (preferencialmente um no domingo) e reduz a jornada máxima de 44h para 40h, sem redução de salário.</li>
+    <li><span class="rot">Fato</span>O texto aprovado pela Câmara em 27/05 prevê transição: 60 dias depois da promulgação, dois dias de descanso e teto de 42h; doze meses depois disso, 40h. Permite compensar trabalho de sábado ou domingo por ajuste de escala, mantendo a média de dois descansos.</li>
+    <li><span class="rot">Fato</span>Precisa de 49 votos em dois turnos. Em 21/09 a votação travou justamente por falta de quórum garantido e foi empurrada para depois do primeiro turno da eleição.</li>
+  </ul>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>As especialistas parceiras e a Central são MEI, então não entram nessa regra. Quem entra é a equipe CLT: recepção e limpeza. Em Curitiba, as duas escalas da recepção foram desenhadas para o teto: 44h exatas cada uma, de segunda a sábado, e juntas cobrem 07:30 às 21:00 nos dias de semana e 07:30 às 20:00 no sábado, sem folga nenhuma no total. Com dois descansos por semana e teto de 42h, essa conta não fecha mais com duas pessoas.</p>
+  <p><span class="rot">Inferência</span>Sessenta dias é pouco para contratar, treinar e acertar o ponto, e a transição cai em dezembro, o mês mais cheio do ano, se a promulgação sair ainda em outubro.</p>
+  <p><span class="rot hip">Hipótese</span>O desfecho é incerto: o mesmo plenário não garantiu quórum três semanas atrás, e o clima depois do primeiro turno pode mudar votos para os dois lados.</p>
+  <h3>Impacto no Let's Liss</h3>
+  <p>Custo de folha CLT sobe, ou a cobertura da recepção encolhe, ou as duas coisas. O sábado, que é dia forte, é o ponto mais sensível.</p>
+  <h3>O que fazer agora</h3>
+  <ol>
+    <li>Não mexer em nada antes do resultado de amanhã.</li>
+    <li>Esta semana, se aprovar no primeiro turno: montar no papel duas escalas da recepção para as duas unidades, uma com 5x2 e 42h e outra com 40h, e ver quantas horas de balcão ficam descobertas. Isso diz se a resposta é uma terceira pessoa, meio período no sábado, ou o Balcão (login compartilhado) cobrindo a ponta.</li>
+    <li>Levar a pergunta ao contador: a convenção coletiva do setor em Curitiba e em São José dos Pinhais já prevê algo sobre compensação de sábado? O intervalo partido de uma das escalas, que já estava pendente, entra na mesma conversa.</li>
+    <li>Atualizar o espelho do ponto depois, não antes. O painel já tem o expediente CLT; ele muda quando a lei mudar.</li>
+  </ol>
+  <div class="fontes">Fontes: <a href="https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/presidente-do-senado-marca-para-terca-votacao-do-fim-da-escala-6x1">Agência Brasil, 02/10/2026</a> · <a href="https://agenciabrasil.ebc.com.br/politica/noticia/2026-05/acordo-preve-regra-de-transicao-de-60-dias-para-fim-da-escala-6x1">Agência Brasil, transição de 60 dias</a> · <a href="https://www.camara.leg.br/noticias/1271880-fim-da-escala-6x1-acordo-preve-jornada-de-40-horas-semanais-e-dois-dias-de-descanso/">Câmara dos Deputados</a> · <a href="https://ndmais.com.br/politica/fim-escala-6x1-votacao-senado-pec/">ND+, 21/09/2026</a></div>
+</section>
+
+<section class="tema" id="t2">
+  <span class="tag agir">Agir</span>
+  <h2>2. O WhatsApp pago chegou, e o GHL tirou a margem dele (retomada do tema 1 da edição 1)</h2>
+  <h3>O que mudou desde a edição 1</h3>
+  <ul>
+    <li><span class="rot">Fato</span>Desde 01/10/2026 a Meta cobra as mensagens de serviço (respostas dentro da janela de 24h, por humano ou por IA de terceiro) e os templates de utilidade dentro da janela. No Brasil: R$ 0,035 por mensagem, com 1.000 grátis por mês por número.</li>
+    <li><span class="rot">Fato</span>O GoHighLevel anunciou em 15/09 que, a partir de 01/10, acabou a taxa de processamento de 5% sobre toda mensagem de WhatsApp: passa a cobrar a tarifa da Meta ao centavo. Confirmou que as 1.000 mensagens de serviço grátis valem por número, incluindo respostas manuais, de workflow e de IA. No Brasil, a mensagem de marketing caiu de US$ 0,0656 para US$ 0,0625. A taxa de US$ 10 por mês da integração por subconta continua. O próprio GHL recomenda alerta de saldo da carteira.</li>
+    <li><span class="rot">Fato</span>Continua grátis a janela de 72h aberta quando a cliente chega por anúncio de clique para o WhatsApp: nessa janela a empresa pode mandar qualquer mensagem, inclusive template, sem pagar à Meta.</li>
+  </ul>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>As duas hipóteses da edição 1 caíram a favor do Let's Liss: o GHL não põe margem e a franquia de 1.000 chega intacta. O custo real agora é a tabela da Meta, que é baixa (5.000 mensagens de serviço no mês dão cerca de R$ 140). O risco que sobra é operacional: carteira sem saldo para de enviar.</p>
+  <p><span class="rot">Inferência</span>O ponto novo é a janela de 72h. Se os anúncios da agência levam a cliente direto ao WhatsApp do GHL, toda a conversa inicial com lead de anúncio sai de graça, inclusive os templates de retomada. Se levam para formulário ou site, essa economia está sendo perdida.</p>
+  <h3>O que fazer agora</h3>
+  <ol>
+    <li>Hoje: alerta de saldo da carteira do GHL ligado (ajuste de configuração, o Codex faz).</li>
+    <li>Perguntar à agência: os anúncios estão com destino clique para o WhatsApp, apontando para o número do GHL? Uma pergunta, uma resposta.</li>
+    <li>Na sexta, olhar quanto a carteira gastou na primeira semana de outubro e comparar com a semana equivalente de setembro. Se a diferença for pequena, o tema sai do radar.</li>
+  </ol>
+  <div class="fontes">Fontes: <a href="https://ideas.gohighlevel.com/changelog/removing-the-5-processing-fee-and-meta-pricing-changes-from-1-october">Changelog do GoHighLevel, 15/09/2026</a> · <a href="https://forbes.com.br/forbes-tech/2026/10/responder-cliente-no-whatsapp-passa-a-ter-custo-para-empresas-a-partir-de-hoje/">Forbes Brasil, 01/10/2026</a></div>
+</section>
+
+<section class="tema" id="t3">
+  <span class="tag inv">Investigar</span>
+  <h2>3. Teto do MEI pode subir para R$ 110 mil em 2027, e as especialistas são MEI</h2>
+  <h3>O que mudou</h3>
+  <ul>
+    <li><span class="rot">Fato</span>O PLP 186/2026, enviado pelo governo, sobe o teto do MEI de R$ 81 mil para R$ 110 mil em 2027 e R$ 140 mil em 2028, e permite ao MEI contratar até dois empregados. Está em comissão especial da Câmara; o teto de 2026 continua R$ 81 mil.</li>
+    <li><span class="rot">Fato</span>O aumento fez parte do acordo político que destravou a PEC da 6x1 na Câmara.</li>
+  </ul>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>R$ 81 mil por ano dá R$ 6.750 por mês. Especialista parceira que fatura acima disso em comissão estoura o MEI, vira microempresa e paga mais imposto. Isso costuma virar pressão por renegociação de comissão ou arranjos que dão problema para o salão parceiro. Com R$ 110 mil, o limite sobe para cerca de R$ 9.170 por mês.</p>
+  <p><span class="rot hip">Hipótese</span>Algumas especialistas de maior volume do Let's Liss já podem estar perto ou acima de R$ 81 mil em 2026. Não sei; é exatamente o que vale olhar.</p>
+  <h3>O que fazer agora</h3>
+  <ol>
+    <li>O Financeiro tira do painel, sem expor nomes fora da Direção, quantas parceiras passaram de R$ 6.750 de comissão média por mês em 2026. Se ninguém estiver perto, o tema desce para Acompanhar.</li>
+    <li>Se alguém estiver perto: conversar antes de dezembro, com o contador, sobre o caminho dela (microempresa no Simples, data de desenquadramento). É cuidado com a parceira e proteção do contrato de parceria.</li>
+  </ol>
+  <div class="fontes">Fontes: <a href="https://www.camara.leg.br/noticias/1286067-motta-recebe-de-lula-projeto-do-governo-sobre-aumento-do-limite-do-mei/">Câmara dos Deputados</a> · <a href="https://www.contabeis.com.br/noticias/77776/confira-a-integra-do-projeto-que-eleva-o-teto-de-faturamento-do-mei/">Contábeis, íntegra do PLP</a> · <a href="https://www.contabilizei.com.br/contabilidade-online/faturamento-mei-2026/">Contabilizei, limite 2026</a></div>
+</section>
+
+<section class="tema" id="t4">
+  <span class="tag acomp">Acompanhar</span>
+  <h2>4. Consumidora apertada, agora com eleição até 25/10 (retomada do tema 2 da edição 1)</h2>
+  <h3>O que mudou desde a edição 1</h3>
+  <ul>
+    <li><span class="rot">Fato</span>A Intenção de Consumo das Famílias (CNC) caiu 0,3% em setembro, para 104,5 pontos, puxada pela piora da perspectiva profissional.</li>
+    <li><span class="rot">Fato</span>Em agosto, 82% das famílias tinham dívidas (recorde pelo sétimo mês) e 29,9% estavam inadimplentes.</li>
+    <li><span class="rot">Fato</span>O Copom cortou a Selic de 14% para 13,75% em 16/09, sem calendário para novos cortes; a próxima reunião é depois da eleição.</li>
+    <li><span class="rot">Fato</span>O primeiro turno, em 04/10, terminou com 47,03% e 45,16% para os dois primeiros colocados; o segundo turno é em 25/10.</li>
+  </ul>
+  <h3>Por que importa</h3>
+  <p><span class="rot">Inferência</span>Três semanas de disputa apertada somam incerteza a uma consumidora que já estava cautelosa. Para ticket alto e adiável, como alisamento, o efeito provável é adiar a decisão, não cancelar.</p>
+  <p><span class="rot hip">Hipótese</span>Período eleitoral costuma encarecer mídia paga pela disputa de atenção. Vale perguntar à agência se o custo por resultado subiu em setembro e outubro contra agosto; sem esse número, é só suspeita.</p>
+  <h3>O que fazer agora</h3>
+  <p>Nada novo além do que a edição 1 já pediu: combo, parcelamento e Club visíveis antes de falar de preço, e o acompanhamento semanal de ciclo de retorno e "preciso remarcar". Se esses números piorarem até 25/10, lembre que a eleição está no meio antes de concluir que é operação.</p>
+  <div class="fontes">Fontes: <a href="https://br.jetss.com/2026/09/23/intencao-de-consumo-das-familias-tem-queda-de-03-em-setembro-revela-cnc/">ICF/CNC, setembro</a> · <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/cnc-endividamento-das-familias-sobe-para-82-mas-inadimplencia-cai">Agência Brasil, Peic</a> · <a href="https://soubrasilia.com/peic-cnc-agosto-2026-endividamento-82-inadimplencia-baixa-renda/">Peic agosto</a> · <a href="https://www.infomoney.com.br/economia/ata-do-copom-projecoes-selic-setembro2026/">InfoMoney, 22/09/2026</a> · <a href="https://exame.com/live-blog/brasil/eleicoes-2026-apuracao-resultado-ao-vivo/">Exame, apuração</a></div>
+</section>
+
+<section class="tema" id="t5">
+  <span class="tag acomp">Acompanhar</span>
+  <h2>5. Alisantes: a mídia voltou ao formol, mas a regra não mudou</h2>
+  <ul>
+    <li><span class="rot">Fato</span>Em setembro uma nova onda de matérias repercutiu o alerta da Anvisa: formol só como conservante (até 0,2%), proibido como alisante; adicionar formol pode ser crime pelo artigo 273 do Código Penal; ácido glioxílico também sem autorização para alisar.</li>
+    <li><span class="rot">Fato</span>Proibições pontuais seguem: em 24/08 a Anvisa proibiu a comercialização de uma escova alisante sem registro.</li>
+    <li><span class="rot">Fato</span>Não encontrei conclusão da reavaliação do ácido glioxílico.</li>
+  </ul>
+  <p><span class="rot">Inferência</span>Boa parte do que circula é reciclagem do informe de 2025, não regra nova. A pergunta interna da edição 1 continua de pé: qual é o ativo de cada linha do Let's Liss e o que muda se o glioxílico for restrito.</p>
+  <div class="fontes">Fontes: <a href="https://lexlegal.com.br/alisamento-com-formol-e-crime-diz-anvisa-em-novo-informe-de-seguranca/">Lex Legal</a> · <a href="https://www.acapitaldanoticia.com.br/2026/09/formol-em-alisantes-de-cabelo-risco.html">A Capital da Notícia, setembro</a> · <a href="https://www.oliberal.com/brasil/amp/anvisa-proibe-comercializacao-de-escova-alisante-e-purificador-de-ar-veja-as-marcas-1.1149464">O Liberal</a> · <a href="https://www.gov.br/anvisa/pt-br/acessoainformacao/perguntasfrequentes/cosmeticos/alisantes">Anvisa, orientações sobre alisantes</a></div>
+</section>
+
+<section class="tema" id="t6">
+  <span class="tag acomp">Acompanhar</span>
+  <h2>6. Meta Business Agent ganhou pagamento por cartão; serve de régua de custo para o LISS 2.0</h2>
+  <ul>
+    <li><span class="rot">Fato</span>Desde 08/09 o Meta Business Agent pode ser pago com cartão; a cobrança é por token desde 01/08, cerca de US$ 0,045 por resposta gerada, segundo fornecedores. A Meta cobra o agente nativo por token, separado das mensagens de serviço.</li>
+  </ul>
+  <p><span class="rot">Inferência</span>Para o Let's Liss nada muda na operação. Mas é uma régua útil: uma resposta do agente da Meta custa algo como R$ 0,24, contra R$ 0,035 da mensagem de serviço que um agente próprio, como o LISS 2.0, paga pela API (mais o custo do modelo de IA). Vale a frente LISS 2.0 ter essa comparação na mão quando discutir custo por conversa.</p>
+  <p>A pergunta à agência sobre ferramentas que foram para trás do Meta One (edição 1) segue sem notícia nova.</p>
+  <div class="fontes">Fontes: <a href="https://pontaltech.com.br/blog/marketing/whatsapp-api-o-que-muda-com-o-meta-business-agent-e-a-nova-cobranca-da-meta/">Pontaltech</a> · <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages">Meta, pricing</a></div>
+</section>
+
+<section class="tema" id="t7">
+  <span class="tag acomp">Acompanhar</span>
+  <h2>7. Retomadas sem fato novo</h2>
+  <ul>
+    <li><strong>Vínculo da cliente com a profissional</strong> (Investigar na edição 1): nada novo no mercado. A consulta proposta, das clientes de especialistas que saíram, quantas voltaram em 120 dias, continua sendo a ação.</li>
+    <li><strong>Busca local e Modo IA do Google</strong> (Investigar na edição 1): nenhum fato novo verificável; textos de agência repetem que a resposta local puxa a lista do Maps por nota, quantidade e recência de avaliações. O teste de cinco minutos e o pedido de avaliação no pós-atendimento seguem pendentes.</li>
+    <li><strong>Estabilidade do GHL:</strong> não reconferi a página de status nesta rodada.</li>
+  </ul>
+  <div class="fontes">Fonte: <a href="https://conteudos.hublocal.com.br/o-novo-modo-ia-do-google-o-que-esta-mudando-para-os-negocios-na-era-da-inteligencia-artificial/">Hublocal, Modo IA e negócios locais</a></div>
+</section>
+
+<section class="tema" id="t8">
+  <span class="tag ign">Ignorar</span>
+  <h2>8. Ignorar por enquanto</h2>
+  <ul>
+    <li><strong>McKinsey State of Beauty:</strong> compra por live (19% dos brasileiros assistiram a uma live de compra no último ano) e o "mix and match" entre luxo e massa. É tema de marca de produto e e-commerce, não de salão de serviço.</li>
+    <li><strong>"Setor de beleza vai movimentar R$ 140 bilhões em 2026" e listas de tendências de outubro</strong> (grisalhos, cellness, sustentabilidade). Números de manchete, sem decisão para o Let's Liss.</li>
+  </ul>
+  <div class="fontes">Fontes: <a href="https://www.mckinsey.de/industries/consumer-packaged-goods/our-insights/state-of-beauty">McKinsey, State of Beauty</a> · <a href="https://www.brasil247.com/empreender/setor-de-beleza-deve-movimentar-r-140-bilhoes-em-2026-com-avanco-da-tecnologia/">Brasil 247, Sebrae</a></div>
+</section>
+
+<footer><span class="assin">Let's Liss</span><span>Radar de Mercado, edição 2, 05/10/2026.</span><span>Próxima edição: segunda-feira, 12/10/2026, com o resultado da votação da 6x1 e a primeira semana de fatura do WhatsApp.</span></footer>
+</div>
+
+</body>
+</html>
